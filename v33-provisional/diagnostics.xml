@@ -1,0 +1,51 @@
+  <!-- Diagnostics library. Usable since schema version 33. Should be placed
+    following the <pharmacology> element (or <entomology> if the former is not
+    used).
+    
+    Additionally, under <monitoring> one can specify <surveys diagnostic="NAME">
+    (i.e. "diagnostic" instead of "detectionLimit") to use one of these to
+    check patency in surveys. Health system and MSAT/test-and-treat diagnostics
+    are specified separately. -->
+  <diagnostics>
+    <!-- Example with cut-off of 2.5 parasites/μL measured according to the
+    non-Garki (also called "other") methodology). Note that if "units" is not
+    specified, it will usually default to "Other" anyway. -->
+    <diagnostic name="example" units="Other">
+      <deterministic minDensity="2.5"/>
+    </diagnostic>
+    <!-- Example specified relative to Malariatherapy methodology. -->
+    <diagnostic name="deterministic" units="Malariatherapy">
+      <!-- this diagnostic has no basis in reality -->
+      <deterministic minDensity="20"/>
+    </diagnostic>
+    <!-- Example specified relative to the Gari measurement method. -->
+    <diagnostic name="garki" units="Garki">
+      <deterministic minDensity="2"/>
+    </diagnostic>
+    <!-- Note that the measurement methodology has a big impact on sensitivity
+    (effectively Garki with cut-off of 2 and non-Garki with cut-off of 40 are
+    similar). -->
+    
+    <!-- Neonatal mortality was estimated from patency data measured using a
+    specific diagnostic. The following should be used to replicate that in our
+    model (though the impact of using different diagnostics is generally not
+    large). Specify the diagnostic under <model>:
+    <clinical healthSystemMemory="28d">
+      <NeonatalMortality diagnostic="neonatal"/>
+    </clinical>
+    (optionally with different healthSystemMemory and with NonMalariaFevers
+    data), and specify the diagnostic under <diagnostics> : -->
+    <diagnostic name="neonatal" units="Other">
+      <!-- detection limit 40 according to non-Garki method -->
+      <deterministic minDensity="40"/>
+    </diagnostic>
+    
+    <!-- Some stochastic models of diagnostics, parameterised with the help of
+    Alan Shapira: -->
+    <diagnostic name="microscopy" units="Other">
+      <stochastic dens_50="20" specificity="0.75"/>
+    </diagnostic>
+    <diagnostic name="RDT" units="Other">
+      <stochastic dens_50="50" specificity="0.942"/>
+    </diagnostic>
+  </diagnostics>

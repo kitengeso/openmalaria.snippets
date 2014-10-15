@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<om:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="R0125" schemaVersion="32" xsi:schemaLocation="http://openmalaria.org/schema/scenario_32 scenario_32.xsd" xmlns:om="http://openmalaria.org/schema/scenario_32">
+  <model>
+    <ModelOptions>
+      <option name="MAX_DENS_CORRECTION" value="true"/>
+      <option name="INNATE_MAX_DENS" value="false"/>
+      <option name="INDIRECT_MORTALITY_FIX" value="false"/>
+    </ModelOptions>
+    <clinical healthSystemMemory="6"/>
+    <human>
+      <availabilityToMosquitoes>
+        <group lowerbound="0.0" value="0.225940909648"/>
+        <group lowerbound="1.0" value="0.286173633441"/>
+        <group lowerbound="2.0" value="0.336898395722"/>
+        <group lowerbound="3.0" value="0.370989854675"/>
+        <group lowerbound="4.0" value="0.403114915112"/>
+        <group lowerbound="5.0" value="0.442585112522"/>
+        <group lowerbound="6.0" value="0.473839351511"/>
+        <group lowerbound="7.0" value="0.512630464378"/>
+        <group lowerbound="8.0" value="0.54487872702"/>
+        <group lowerbound="9.0" value="0.581527755812"/>
+        <group lowerbound="10.0" value="0.630257580698"/>
+        <group lowerbound="11.0" value="0.663063362714"/>
+        <group lowerbound="12.0" value="0.702417432755"/>
+        <group lowerbound="13.0" value="0.734605377277"/>
+        <group lowerbound="14.0" value="0.788908765653"/>
+        <group lowerbound="15.0" value="0.839587932303"/>
+        <group lowerbound="20.0" value="1.0"/>
+      </availabilityToMosquitoes>
+    </human>
+    <parameters interval="5" iseed="0" latentp="3">
+      <!-- run id=125  modelVersi=64 parameterization id=247027 sampling date=2009-11-11 02:08:06 lossfunction=55.007777 -->
+      <parameter include="0" name="'-ln(1-Sinf)'" number="1" value="0.050736"/>
+      <parameter include="0" name="Estar" number="2" value="0.03247"/>
+      <parameter include="1" name="Simm" number="3" value="0.153537"/>
+      <parameter include="1" name="Xstar_p" number="4" value="42848.0957"/>
+      <parameter include="1" name="gamma_p" number="5" value="1.800168"/>
+      <parameter include="1" name="sigma2i" number="6" value="9.325043"/>
+      <parameter include="1" name="CumulativeYstar" number="7" value="89340761.4154"/>
+      <parameter include="1" name="CumulativeHstar" number="8" value="57.734803"/>
+      <parameter include="1" name="'-ln(1-alpha_m)'" number="9" value="2.171731"/>
+      <parameter include="1" name="decay_m" number="10" value="2.266724"/>
+      <parameter include="1" name="sigma2_0" number="11" value="0.706213"/>
+      <parameter include="1" name="Xstar_v" number="12" value="0.914068"/>
+      <parameter include="1" name="Ystar2" number="13" value="14757.107611"/>
+      <parameter include="1" name="alpha" number="14" value="190399.114451"/>
+      <parameter include="1" name="Density bias (non Garki)" number="15" value="0.149691"/>
+      <parameter include="0" name="No Use 1" number="16" value="1.0"/>
+      <parameter include="1" name="log oddsr CF community" number="17" value="0.795329"/>
+      <parameter include="1" name="Indirect risk cofactor" number="18" value="0.030504"/>
+      <parameter include="1" name="Non-malaria infant mortality" number="19" value="44.183782"/>
+      <parameter include="1" name="Density bias (Garki)" number="20" value="4.658019"/>
+      <parameter include="1" name="Severe Malaria Threshhold" number="21" value="323983.753925"/>
+      <parameter include="0" name="Immunity Penalty" number="22" value="1.0"/>
+      <parameter include="0" name="Immune effector decay" number="23" value="0.00095"/>
+      <parameter include="1" name="comorbidity intercept" number="24" value="0.121306"/>
+      <parameter include="1" name="Ystar half life" number="25" value="0.304802"/>
+      <parameter include="1" name="Ystar1" number="26" value="0.612674"/>
+      <parameter include="0" name="Asex immune decay" number="27" value="0.0"/>
+      <parameter include="1" name="Ystar0" number="28" value="349.430885"/>
+      <parameter include="1" name="Idete multiplier" number="29" value="3.067597"/>
+      <parameter include="1" name="critical age for comorbidity" number="30" value="0.088648"/>
+    </parameters>
+  </model>
+</om:scenario>
