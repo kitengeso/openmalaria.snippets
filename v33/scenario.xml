@@ -35,6 +35,8 @@ all instances of the number (33), except that versions <32 are different. -->
   <healthSystem ... />
   <!-- Required: vector and transmission data. -->
   <entomology ... />
+  <!-- Optional: description of parasite genetics and resistance. -->
+  <parasiteGenetics ... />
   <!-- Optional: drug & treatment library.
   This has two sections respectively on how to administer drugs (schedules,
   dose sizes) and how those drugs act and decay (PK and PD). -->
