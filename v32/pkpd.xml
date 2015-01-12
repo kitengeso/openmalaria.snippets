@@ -8,7 +8,7 @@
       <PD>
         <allele name="sensitive">
           <initial_frequency>1</initial_frequency>
-          <max_killing_rate>4</max_killing_rate>
+          <max_killing_rate>27.6</max_killing_rate>
           <IC50>0.0023</IC50>
           <slope>4</slope>
         </allele>
@@ -23,7 +23,7 @@
       <PD>
         <allele name="sensitive">
           <initial_frequency>1</initial_frequency>
-          <max_killing_rate>4.6</max_killing_rate>
+          <max_killing_rate>27.6</max_killing_rate>
           <IC50>0.0016</IC50>
           <slope>4</slope>
         </allele>
@@ -38,15 +38,15 @@
       <PD>
         <allele name="sensitive">
           <initial_frequency>1</initial_frequency>
-          <max_killing_rate>4.6</max_killing_rate>
-          <IC50>0.0009</IC50>
+          <max_killing_rate>27.6</max_killing_rate>
+          <IC50>0.009</IC50>
           <slope>4</slope>
         </allele>
       </PD>
       <PK>
         <negligible_concentration>0.000016</negligible_concentration>
         <half_life>0.035</half_life>
-        <vol_dist>8</vol_dist>
+        <vol_dist>1.49</vol_dist>
       </PK>
     </drug>
     <drug abbrev="CQ">
@@ -69,12 +69,12 @@
         <allele name="sensitive">
           <initial_frequency>1</initial_frequency>
           <max_killing_rate>3.45</max_killing_rate>
-          <IC50>0.100</IC50>
+          <IC50>0.032</IC50>
           <slope>4</slope>
         </allele>
       </PD>
       <PK>
-        <negligible_concentration>0.001</negligible_concentration>
+        <negligible_concentration>0.00032</negligible_concentration>
         <half_life>4.332</half_life>
         <vol_dist>21</vol_dist>
       </PK>
