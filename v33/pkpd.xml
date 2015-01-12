@@ -13,21 +13,21 @@
         <!-- the number of tablets recommended. -->
         <!-- Source: WHO / Novartis product information -->
         <medicate drug="AR" hour="0" mg="20"/>
-        <medicate drug="LU" hour="0" mg="120"/>
+        <medicate drug="LF" hour="0" mg="120"/>
         <medicate drug="AR" hour="8" mg="20"/>
-        <medicate drug="LU" hour="8" mg="120"/>
+        <medicate drug="LF" hour="8" mg="120"/>
         <medicate drug="AR" hour="24" mg="20"/>
-        <medicate drug="LU" hour="24" mg="120"/>
+        <medicate drug="LF" hour="24" mg="120"/>
         <medicate drug="AR" hour="36" mg="20"/>
-        <medicate drug="LU" hour="36" mg="120"/>
+        <medicate drug="LF" hour="36" mg="120"/>
         <medicate drug="AR" hour="48" mg="20"/>
-        <medicate drug="LU" hour="48" mg="120"/>
+        <medicate drug="LF" hour="48" mg="120"/>
         <medicate drug="AR" hour="60" mg="20"/>
-        <medicate drug="LU" hour="60" mg="120"/>
+        <medicate drug="LF" hour="60" mg="120"/>
       </schedule>
       <schedule name="AL_bad_adherence">
         <medicate drug="AR" hour="0" mg="20"/>
-        <medicate drug="LU" hour="0" mg="120"/>
+        <medicate drug="LF" hour="0" mg="120"/>
       </schedule>
       <schedule name="AS">
         <!-- TODO: what is this? Artesunate IV? Are doses in mg/kg? -->
@@ -61,7 +61,7 @@
       </dosages>
     </treatments>
     <drugs>
-      <drug abbrev="AR">
+      <drug abbrev="AR"><!-- Artemether -->
         <PD>
           <allele name="sensitive">
             <initial_frequency>1</initial_frequency>
@@ -76,7 +76,7 @@
           <vol_dist>17.4</vol_dist>
         </PK>
       </drug>
-      <drug abbrev="AS">
+      <drug abbrev="AS"><!-- Artesunate -->
         <PD>
           <allele name="sensitive">
             <initial_frequency>1</initial_frequency>
@@ -91,7 +91,7 @@
           <vol_dist>2.75</vol_dist>
         </PK>
       </drug>
-      <drug abbrev="DHQ">
+      <drug abbrev="DHA"><!-- Dihydroartemisinin -->
         <PD>
           <allele name="sensitive">
             <initial_frequency>1</initial_frequency>
@@ -106,7 +106,7 @@
           <vol_dist>1.49</vol_dist>
         </PK>
       </drug>
-      <drug abbrev="CQ">
+      <drug abbrev="CQ"><!-- Chloroquine -->
         <PD>
           <allele name="sensitive">
             <initial_frequency>1</initial_frequency>
@@ -121,7 +121,7 @@
           <vol_dist>300</vol_dist>
         </PK>
       </drug>
-      <drug abbrev="LU">
+      <drug abbrev="LF"><!-- Lumefantrine -->
         <PD>
           <allele name="sensitive">
             <initial_frequency>1</initial_frequency>
@@ -136,7 +136,7 @@
           <vol_dist>21</vol_dist>
         </PK>
       </drug>
-      <drug abbrev="MQ">
+      <drug abbrev="MQ"><!-- Mefloquine -->
         <PD>
           <allele name="sensitive">
             <initial_frequency>1</initial_frequency>
@@ -151,7 +151,7 @@
           <vol_dist>20.8</vol_dist>
         </PK>
       </drug>
-      <drug abbrev="PQ">
+      <drug abbrev="PPQ"><!-- Piperaquine -->
         <PD>
           <allele name="sensitive">
             <initial_frequency>1</initial_frequency>
