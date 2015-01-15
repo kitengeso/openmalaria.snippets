@@ -63,12 +63,11 @@
     <drugs>
       <drug abbrev="AR"><!-- Artemether -->
         <PD>
-          <allele name="sensitive">
-            <initial_frequency>1</initial_frequency>
+          <phenotype name="sensitive">
             <max_killing_rate>27.6</max_killing_rate>
             <IC50>0.0023</IC50>
             <slope>4</slope>
-          </allele>
+          </phenotype>
         </PD>
         <PK>
           <negligible_concentration>0.000023</negligible_concentration>
@@ -78,12 +77,11 @@
       </drug>
       <drug abbrev="AS"><!-- Artesunate -->
         <PD>
-          <allele name="sensitive">
-            <initial_frequency>1</initial_frequency>
+          <phenotype name="sensitive">
             <max_killing_rate>27.6</max_killing_rate>
             <IC50>0.0016</IC50>
             <slope>4</slope>
-          </allele>
+          </phenotype>
         </PD>
         <PK>
           <negligible_concentration>0.000016</negligible_concentration>
@@ -93,12 +91,11 @@
       </drug>
       <drug abbrev="DHA"><!-- Dihydroartemisinin -->
         <PD>
-          <allele name="sensitive">
-            <initial_frequency>1</initial_frequency>
+          <phenotype name="sensitive">
             <max_killing_rate>27.6</max_killing_rate>
             <IC50>0.009</IC50>
             <slope>4</slope>
-          </allele>
+          </phenotype>
         </PD>
         <PK>
           <negligible_concentration>0.000016</negligible_concentration>
@@ -108,12 +105,11 @@
       </drug>
       <drug abbrev="CQ"><!-- Chloroquine -->
         <PD>
-          <allele name="sensitive">
-            <initial_frequency>1</initial_frequency>
+          <phenotype name="sensitive">
             <max_killing_rate>3.45</max_killing_rate>
             <IC50>0.02</IC50>
             <slope>1.6</slope>
-          </allele>
+          </phenotype>
         </PD>
         <PK>
           <negligible_concentration>0.00036</negligible_concentration>
@@ -123,12 +119,11 @@
       </drug>
       <drug abbrev="LF"><!-- Lumefantrine -->
         <PD>
-          <allele name="sensitive">
-            <initial_frequency>1</initial_frequency>
+          <phenotype name="sensitive">
             <max_killing_rate>3.45</max_killing_rate>
             <IC50>0.032</IC50>
             <slope>4</slope>
-          </allele>
+          </phenotype>
         </PD>
         <PK>
           <negligible_concentration>0.00032</negligible_concentration>
@@ -138,12 +133,11 @@
       </drug>
       <drug abbrev="MQ"><!-- Mefloquine -->
         <PD>
-          <allele name="sensitive">
-            <initial_frequency>1</initial_frequency>
+          <phenotype name="sensitive">
             <max_killing_rate>3.45</max_killing_rate>
             <IC50>0.027</IC50>
             <slope>5</slope>
-          </allele>
+          </phenotype>
         </PD>
         <PK>
           <negligible_concentration>0.005</negligible_concentration>
@@ -153,12 +147,11 @@
       </drug>
       <drug abbrev="PPQ"><!-- Piperaquine -->
         <PD>
-          <allele name="sensitive">
-            <initial_frequency>1</initial_frequency>
+          <phenotype name="sensitive">
             <max_killing_rate>3.45</max_killing_rate>
             <IC50>0.088</IC50>
             <slope>6</slope>
-          </allele>
+          </phenotype>
         </PD>
         <PK>
           <negligible_concentration>0.005</negligible_concentration>
