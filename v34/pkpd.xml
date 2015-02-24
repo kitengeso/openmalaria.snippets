@@ -5,6 +5,9 @@
     
     This library can be copied into the relevant section of a scenario
     document. Unused drugs, schedules and dosages may (if desired) be deleted.
+    
+    Note: currently no variance of PK/PD parameters is included. Possibly it
+    should be.
     -->
     <treatments>
       <schedule name="AL_full">
@@ -129,6 +132,10 @@
           <negligible_concentration>0.00032</negligible_concentration>
           <half_life>4.332</half_life>
           <vol_dist>21</vol_dist>
+          <compartment2>
+            <k12 mean="..."/>
+            <k21 mean="..."/>
+          </compartment2>
         </PK>
       </drug>
       <drug abbrev="MQ"><!-- Mefloquine -->
@@ -145,7 +152,7 @@
           <vol_dist>20.8</vol_dist>
         </PK>
       </drug>
-      <drug abbrev="PPQ"><!-- Piperaquine -->
+      <drug abbrev="PPQ1"><!-- Piperaquine 1-compartment (poor model) -->
         <PD>
           <phenotype name="sensitive">
             <max_killing_rate>3.45</max_killing_rate>
@@ -157,6 +164,50 @@
           <negligible_concentration>0.005</negligible_concentration>
           <half_life>23.105</half_life>
           <vol_dist>150</vol_dist>
+        </PK>
+      </drug>
+      <drug abbrev="PPQ"><!-- Piperaquine 2-compartment Hodel 2013 (best data and likely best model) -->
+        <PD>
+          <phenotype name="sensitive">
+            <max_killing_rate>3.45</max_killing_rate>
+            <IC50>0.020831339</IC50>
+            <slope>6</slope>
+          </phenotype>
+        </PD>
+        <PK>
+          <!--TODO: set sigmas-->
+          <negligible_concentration>0.005</negligible_concentration>
+          <k mean="0.6242774566473989" sigma="0"/>
+          <m_exponent>0.25</m_exponent>
+          <vol_dist>173</vol_dist>
+          <compartment2>
+            <a12 mean="8.46242774566474" sigma="0"/>
+            <a21 mean="3.3058064516129035" sigma="0"/>
+          </compartment2>
+        </PK>
+      </drug>
+      <drug abbrev="PPQ"><!-- Piperaquine 3-compartment Tarning 2012 AAC -->
+        <PD>
+          <phenotype name="sensitive">
+            <max_killing_rate>3.45</max_killing_rate>
+            <IC50>0.020831339</IC50>
+            <slope>6</slope>
+          </phenotype>
+        </PD>
+        <PK>
+          <!--TODO: set sigmas-->
+          <negligible_concentration>0.005</negligible_concentration>
+          <k mean="16.314788273615637" sigma="0"/>
+          <m_exponent>1</m_exponent>
+          <vol_dist>57.5625</vol_dist>
+          <compartment2>
+            <a12 mean="89.01628664495114" sigma="0"/>
+            <a21 mean="55.394594594594594" sigma="0"/>
+          </compartment2>
+          <compartment3>
+            <a13 mean="43.36156351791531" sigma="0"/>
+            <a31 mean="3.8155414012738853" sigma="0"/>
+          </compartment3>
         </PK>
       </drug>
     </drugs>
