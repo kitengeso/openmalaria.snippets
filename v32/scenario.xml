@@ -3,7 +3,7 @@
 This can be used as a template to construct the required scenario. Further
 snippets and documentation on the OpenMalaria wiki[1] should be used to
 complete the scenario.
-[1]: https://code.google.com/p/openmalaria/wiki/Start?tm=6
+[1]: https://github.com/SwissTPH/openmalaria/wiki/Start
 -->
 <!-- ... indicates possible extra content. <element ... /> may be replaced with <element ...> ... </element> -->
 <!-- The om:scenario attributes should not be changed excepting "name" and
