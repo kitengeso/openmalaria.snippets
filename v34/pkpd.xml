@@ -33,12 +33,12 @@
         <medicate drug="LF" hour="0" mg="120"/>
       </schedule>
       <schedule name="AS">
-        <!-- TODO: what is this? Artesunate IV? Are doses in mg/kg? -->
-        <medicate drug="AS" duration="0.001" hour="0" mg="2.4"/>
-        <medicate drug="AS" duration="0.001" hour="12" mg="2.4"/>
-        <medicate drug="AS" duration="0.001" hour="24" mg="2.4"/>
-        <medicate drug="AS" duration="0.001" hour="48" mg="2.4"/>
-        <medicate drug="AS" duration="0.001" hour="72" mg="2.4"/>
+        <!-- TODO: what is this? Artesunate IV - needs a duration parameter? Are doses in mg/kg? -->
+        <medicate drug="AS" hour="0" mg="2.4"/>
+        <medicate drug="AS" hour="12" mg="2.4"/>
+        <medicate drug="AS" hour="24" mg="2.4"/>
+        <medicate drug="AS" hour="48" mg="2.4"/>
+        <medicate drug="AS" hour="72" mg="2.4"/>
       </schedule>
       <dosages name="AL_age">
         <!-- This dosing information was provided by Valerie Crowell; not sure of source -->
