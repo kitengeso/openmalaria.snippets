@@ -16,7 +16,7 @@ There are currently no requirements on the content of snippets other than that i
 
 ## Contributions ##
 
-Contributions of new publishable and documented snippets are welcomed. If you can edit this wiki you should also be able to amend this library yourself, by cloning the git repository with this link: [git://github.com:SwissTPH/openmalaria.snippets](git://github.com:SwissTPH/openmalaria.snippets); alternatively contact the OpenMalaria developer.
+Contributions of new publishable and documented snippets are welcomed. If you can edit this wiki you should also be able to amend this library yourself, by cloning the git repository with this git-specific link: `git://github.com:SwissTPH/openmalaria.snippets`; alternatively contact the OpenMalaria developer.
 
 Snippets should be placed under the folder for the appropriate version in a sensible location (it may be necessary to rearrange other snippets; there is currently no defined organisation beyond versions). New snippets should also be updated to the latest version (by notifying someone able to do this if necessary).
 
