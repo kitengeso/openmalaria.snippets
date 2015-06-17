@@ -1,0 +1,23 @@
+  <demography maximumAgeYrs="90" name="Zambia 2010 census_Southern province " popSize="10000">
+    <ageGroup lowerbound="0">
+      <group poppercent="3.6" upperbound="1"/>
+      <group poppercent="14.1" upperbound="5"/>
+      <group poppercent="14.8" upperbound="10"/>
+      <group poppercent="13.6" upperbound="15"/>
+      <group poppercent="11.4" upperbound="20"/>
+      <group poppercent="8.9" upperbound="25"/>
+      <group poppercent="8" upperbound="30"/>
+      <group poppercent="6.4" upperbound="35"/>
+      <group poppercent="5.2" upperbound="40"/>
+      <group poppercent="3.6" upperbound="45"/>
+      <group poppercent="2.8" upperbound="50"/>
+      <group poppercent="2.2" upperbound="55"/>
+      <group poppercent="1.5" upperbound="60"/>
+      <group poppercent="1.3" upperbound="65"/>
+      <group poppercent="0.9" upperbound="70"/>
+      <group poppercent="0.7" upperbound="75"/>
+      <group poppercent="0.5" upperbound="80"/>
+      <group poppercent="0.3" upperbound="85"/>
+      <group poppercent="0.1" upperbound="90"/>
+    </ageGroup>
+  </demography>
