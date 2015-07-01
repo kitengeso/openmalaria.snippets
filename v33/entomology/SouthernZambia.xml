@@ -1,0 +1,84 @@
+    <!--- source: 2014-04-15-ES-ZambiaSouthern-full, 
+			included in snippet library by PPR
+				@eir@ to be replaced by annual scaled value--->
+    
+    <entomology mode="dynamic" name="Zambia Southern province" scaledAnnualEIR="@eir@">
+        <vector>
+            <anopheles mosquito="funestus" propInfected="0.078" propInfectious="0.015">
+                <seasonality annualEIR="0.2" input="EIR">
+                    <monthlyValues smoothing="fourier"> 
+                        <value>0.00490971578200862</value>
+                        <value>0.0171840052370302</value>
+                        <value>0.228138126670667</value>
+                        <value>0.647482406851781</value>
+                        <value>0.102285745458513</value>
+                        <value>0.0171840052370302</value>
+                        <value>0.00490971578200862</value>
+                        <value>0.001</value>
+                        <value>0.001</value>
+                        <value>0.001</value>
+                        <value>0.001</value>
+                        <value>0.001</value>
+                    </monthlyValues>
+                </seasonality>
+                <mosq minInfectedThreshold="0.001">
+                    <mosqRestDuration value="2"/>
+                    <extrinsicIncubationPeriod value="12"/>
+                    <mosqLaidEggsSameDayProportion value="0.616"/>
+                    <mosqSeekingDuration value="0.33"/>
+                    <mosqSurvivalFeedingCycleProbability value="0.611"/>
+                    <availabilityVariance value="0"/>
+                    <mosqProbBiting mean="0.95" variance="0"/>
+                    <mosqProbFindRestSite mean="0.95" variance="0"/>
+                    <mosqProbResting mean="0.99" variance="0"/>
+                    <mosqProbOvipositing value="0.88"/>
+                    <mosqHumanBloodIndex value="0.963"/>
+                </mosq>
+                <nonHumanHosts name="unprotectedAnimals">
+                    <mosqRelativeEntoAvailability value="1.0"/>
+                    <mosqProbBiting value="0.95"/>
+                    <mosqProbFindRestSite value="0.95"/>
+                    <mosqProbResting value="0.99"/>
+                </nonHumanHosts>
+            </anopheles>
+            <anopheles mosquito="arabiensis" propInfected="0.078" propInfectious="0.021">
+                <seasonality annualEIR="0.8" input="EIR">
+                    <monthlyValues smoothing="fourier"> 
+                        <value>0.00490971578200862</value>
+                        <value>0.0171840052370302</value>
+                        <value>0.228138126670667</value>
+                        <value>0.647482406851781</value>
+                        <value>0.102285745458513</value>
+                        <value>0.0171840052370302</value>
+                        <value>0.00490971578200862</value>
+                        <value>0.001</value>
+                        <value>0.001</value>
+                        <value>0.001</value>
+                        <value>0.001</value>
+                        <value>0.001</value>
+                    </monthlyValues>
+                </seasonality>
+                <mosq minInfectedThreshold="0.001">
+                    <mosqRestDuration value="2"/>
+                    <extrinsicIncubationPeriod value="12"/>
+                    <mosqLaidEggsSameDayProportion value="0.313"/>
+                    <mosqSeekingDuration value="0.33"/>
+                    <mosqSurvivalFeedingCycleProbability value="0.623"/>
+                    <availabilityVariance value="0"/>
+                    <mosqProbBiting mean="0.95" variance="0"/>
+                    <mosqProbFindRestSite mean="0.95" variance="0"/>
+                    <mosqProbResting mean="0.99" variance="0"/>
+                    <mosqProbOvipositing value="0.88"/>
+                    <mosqHumanBloodIndex value="0.97"/>
+                </mosq>
+                <nonHumanHosts name="unprotectedAnimals">
+                    <mosqRelativeEntoAvailability value="1.0"/>
+                    <mosqProbBiting value="0.95"/>
+                    <mosqProbFindRestSite value="0.95"/>
+                    <mosqProbResting value="0.99"/>
+                </nonHumanHosts>
+            </anopheles>
+            <nonHumanHosts name="unprotectedAnimals" number="1.0"/>
+        </vector>
+    </entomology>
+ 
