@@ -1,6 +1,7 @@
-    <!--- source: 2014-04-15-ES-ZambiaSouthern-full, 
-			included in snippet library by PPR
-				@eir@ to be replaced by annual scaled value--->
+    <!--- EntomologySouthernZambia.xml 
+			source: 2014-04-15-ES-ZambiaSouthern-full, 
+				included in snippet library by PPR
+					@eir@ to be replaced by annual scaled value--->
     
     <entomology mode="dynamic" name="Zambia Southern province" scaledAnnualEIR="@eir@">
         <vector>
