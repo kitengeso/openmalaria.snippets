@@ -1,0 +1,15 @@
+<!-- MDA with DHA Piperaquine 
+     Source: 2014-07-16-KK-MSAT-MDA experiment
+     Converted to v33 by TS & PPR
+	 -->
+	  <component id="DHAPPQ" name="example with screening">
+		<treatSimple durationBlood="1t"/>
+	  </component>
+      <component id="DHAPPQ-PEV">
+        <!-- this reduces the chance of re-infection after DHAPPQ treatment -->
+        <PEV>
+          <decay L="0.033501" function="weibull" k="0.799713"/>
+            <efficacyB value="1000"/>
+          <initialEfficacy value="0.99"/>
+        </PEV>
+      </component>

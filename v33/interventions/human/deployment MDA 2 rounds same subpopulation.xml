@@ -1,0 +1,26 @@
+<!-- MDA with DHA Piperaquine deployment 
+     Completely correlated
+     Source: 2014-07-16-KK-MSAT-MDA experiment
+     Converted to v33 by TS & PPR
+	 -->
+<!-- Assume 6 percent of eligible age range are potentially pregnant women (based on 25 percent of women 15-49)
+     Nominal coverage of 70% therefore corresponds to 64%
+	 To simulate the same individuals receiving MDA in all rounds, an MDA cohort is defined
+	 -->
+	 <deployment name="firstRound">
+	 	<component id="MDA cohort"/>
+        <component id="DHAPPQ"/>
+        <component id="DHAPPQ-PEV"/>
+		<timed> 
+			<deploy time="10t" minAge="0.5" maxAge="99.9" coverage="0.64" />
+		</timed>
+     </deployment>
+ 	 <deployment name="furtherRounds">
+        <component id="DHAPPQ"/>
+        <component id="DHAPPQ-PEV"/>
+		<timed>  
+			<restrictToSubPop id="MDA cohort" complement="false"/>
+		<deploy coverage="1.0" time="17"/>
+		<deploy coverage="1.0" time="24"/>
+	   </timed>
+     </deployment>

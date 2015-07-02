@@ -1,4 +1,6 @@
-  <!-- This is demography data from Ifakara. Many, probably most of our
+  <!--demographyIfakara.xml 
+  This is demography data from Ifakara. Source:  INDEPTH life tables
+  Many, probably most of our
   simulations use this data. The only thing you need to change is "popSize"
   (number of simulated humans: often 10000 or 100000 are used). -->
   <demography maximumAgeYrs="90" name="Ifakara" popSize="1000">
