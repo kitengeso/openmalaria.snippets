@@ -27,6 +27,9 @@
         <group lowerbound="14.0" value="0.788908765653"/>
         <group lowerbound="15.0" value="0.839587932303"/>
         <group lowerbound="20.0" value="1.0"/>
+        <group lowerbound="20.0" value="1.0"/>
+        <!-- repeated parameter *IS* required, otherwise interpolation will
+        make parameter continually increase and the "adult age" will be wrong. -->
       </availabilityToMosquitoes>
     </human>
     <parameters interval="5" iseed="0" latentp="3">
