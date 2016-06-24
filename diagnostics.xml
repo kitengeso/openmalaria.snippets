@@ -1,3 +1,6 @@
+<!-- min-version: 33 -->
+<!-- snippet: om:diagnostics -->
+<!-- disclaimer: this may not work as intended -->
   <!-- Diagnostics library. Usable since schema version 33. Should be placed
     following the <pharmacology> element (or <entomology> if the former is not
     used).
@@ -5,7 +8,10 @@
     Additionally, under <monitoring> one can specify <surveys diagnostic="NAME">
     (i.e. "diagnostic" instead of "detectionLimit") to use one of these to
     check patency in surveys. Health system and MSAT/test-and-treat diagnostics
-    are specified separately. -->
+    are specified separately.
+    
+    You can safely remove any diagnostics you do not use from your scenario.
+    -->
   <diagnostics>
     <!-- Example with cut-off of 2.5 parasites/μL measured according to the
     non-Garki (also called "other") methodology). Note that if "units" is not
