@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<om:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="R0065" schemaVersion="32" xsi:schemaLocation="http://openmalaria.org/schema/scenario_32 scenario_32.xsd" xmlns:om="http://openmalaria.org/schema/scenario_32">
-  <model>
+<!-- min-version: 24 -->
+<!-- snippet: om:model -->
+ <model>
     <ModelOptions>
       <option name="LOGNORMAL_MASS_ACTION" value="true"/>
       <option name="MAX_DENS_CORRECTION" value="true"/>
@@ -66,4 +66,3 @@
       <parameter include="1" name="critical age for comorbidity" number="30" value="0.126811"/>
     </parameters>
   </model>
-</om:scenario>
