@@ -33,9 +33,11 @@ should be a comment like the following somewhere in another snippet (a
 
     <!-- placeholder: om:demography -->
 
-A variation of this hints that this part is optional, and can be omitted:
+Variations on this hint at how many items can be inserted here (optional: zero
+or one, any: zero or more):
 
-    <!-- optional placeholder: om:pharmacology -->
+    <!-- placeholder optional: om:pharmacology -->
+    <!-- placeholder any: om:intervention-elt -->
 
 In addition, each file should contain some commentry of its source, its
 purpose and how its parameters were obtained.

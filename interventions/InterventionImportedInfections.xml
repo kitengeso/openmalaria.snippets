@@ -1,0 +1,14 @@
+<!-- min-version: 33 -->
+<!-- snippet: om:intervention-elt -->
+<!--- InterventionImportedInfections.xml
+    source: adapted from
+    https://github.com/SwissTPH/openmalaria/wiki/ModelIntervMisc#import-infections
+    
+    This snippet specifies the importation of 5 infections per 1000 population
+    per year, starting at the beginning of the simulation.
+    Included in library by PPR --->
+<importedInfections name="constant rate of 5 per 1000">
+  <timed period="365d">
+    <rate time="0" value="5"/>
+  </timed>
+</importedInfections>
