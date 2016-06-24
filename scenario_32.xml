@@ -37,7 +37,7 @@ all instances of the number (32), except that versions <32 are different. -->
   <!-- Required: description of the (initial) health system. -->
   <healthSystem ... />
   <!-- Required: vector and transmission data. -->
-  <entomology ... />
+  <!-- placeholder: entomology -->
   <!-- Optional: drug library.
   This describes how those drugs act and decay (PK and PD). -->
   <!-- optional placeholder: om:pharmacology -->

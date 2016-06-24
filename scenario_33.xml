@@ -37,7 +37,7 @@ all instances of the number (33), except that versions <32 are different. -->
   <!-- Required: description of the (initial) health system. -->
   <healthSystem ... />
   <!-- Required: vector and transmission data. -->
-  <entomology ... />
+  <!-- placeholder: entomology -->
   <!-- Optional: description of parasite genetics and resistance. -->
   <parasiteGenetics ... />
   <!-- Optional: drug library.
