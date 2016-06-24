@@ -1,0 +1,83 @@
+<!-- min-version: 34 -->
+<!-- max-version: 34 -->
+<!-- disclaimer: this may not work as intended -->
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Outline of the base scenario.
+This can be used as a template to construct the required scenario. Further
+snippets and documentation on the OpenMalaria wiki[1] should be used to
+complete the scenario.
+[1]: https://github.com/SwissTPH/openmalaria/wiki/Start
+-->
+<!-- ... indicates possible extra content. <element ... /> may be replaced with <element ...> ... </element> -->
+<!-- The om:scenario attributes should not be changed excepting "name" and
+if necessary replacing "scenario_34.xsd" with the name of your copy of the
+schema (XSD). Changing to a different schema version usually involves replacing
+all instances of the number (34), except that versions <32 are different. -->
+<om:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             name="..." schemaVersion="34"
+             xsi:schemaLocation="http://openmalaria.org/schema/scenario_34 scenario_34.xsd"
+             xmlns:om="http://openmalaria.org/schema/scenario_34">
+  <!-- Required. See demography/Ifakara.xml. -->
+  <!-- placeholder: om:demography -->
+  <!-- Required: specification of model outputs. -->
+  <monitoring name="...">
+    <!-- Optional: "continuous" outputs. -->
+    <continuous .../>
+    <!-- Required: outputs for surveys (not continuous). -->
+    <SurveyOptions .../>
+    <!-- Required: survey times and diagnostic. -->
+    <surveys .../>
+    <!-- Required: age groups for surveys. -->
+    <ageGroup .../>
+    <!-- Optional: cohorts. -->
+    <cohorts .../>
+  </monitoring>
+  <!-- Required: description of all interventions. Can be empty. -->
+  <interventions ... />
+  <!-- Required: description of the (initial) health system. -->
+  <healthSystem ... />
+  <!-- Required: vector and transmission data. -->
+  <entomology ... />
+  <!-- Optional: description of parasite genetics and resistance. -->
+  <parasiteGenetics ... />
+  <!-- Optional: drug library.
+  This describes how those drugs act and decay (PK and PD). -->
+  <!-- optional placeholder: om:pharmacology -->
+  <!-- Optional: diagnostics library -->
+  <!-- optional placeholder: om:diagnostics -->
+  <!-- The model section is currently set as a single snippet, but some
+     - parts can be changed.
+     - 
+     - <model>
+     -   <ModelOptions>
+     -   Some on/off options go here. Note that many options should not be
+     -   changed except when starting a new fitting run: don't change without
+     -   checking!
+     -   </ModelOptions>
+     -   Health system memory can be changed:
+     -   <clinical healthSystemMemory="...">
+     -     Optional: specification of the diagnostic used to fit the neonatal mortality model.
+     -     <NeonatalMortality ... />
+     -     Non-malaria fever data can be included here:
+     -     <NonMalariaFevers ... />
+     -   </clinical>
+     -   <human>
+     -     Required: human vector availability data:
+     -     <availabilityToMosquitoes ... />
+     -     Optional: human body mass:
+     -     <weight ... />
+     -   </human>
+     -   Required: model parameters. This comes from model fitting.
+     -   "interval" is the number of days per update step (1 or 5); much other data
+     -   depends on this so don't change except by selecting another base scenario.
+     -   "iseed" is the random number seed. If non-zero it should ideally be a
+     -   prime. Experiment creator tools set this for you.
+     -   "latentp" is the duration of latent period of an infection, i.e. from
+     -   inoculation by mosquito to the first day the infection is patent.
+     -   <parameters interval="1" iseed="0" latentp="15d">
+     -     ...
+     -   </parameters>
+     - </model>
+  -->
+  <!-- placeholder: om:model -->
+</om:scenario>

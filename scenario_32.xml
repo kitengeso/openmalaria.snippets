@@ -1,5 +1,8 @@
+<!-- min-version: 32 -->
+<!-- max-version: 32 -->
+<!-- disclaimer: this may not work as intended -->
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Outline of the base scenario.
+<!-- Outline of a scenario XML.
 This can be used as a template to construct the required scenario. Further
 snippets and documentation on the OpenMalaria wiki[1] should be used to
 complete the scenario.
@@ -15,7 +18,7 @@ all instances of the number (32), except that versions <32 are different. -->
              xsi:schemaLocation="http://openmalaria.org/schema/scenario_32 scenario_32.xsd"
              xmlns:om="http://openmalaria.org/schema/scenario_32">
   <!-- Required. See demography/Ifakara.xml. -->
-  <demography ... />
+  <!-- placeholder: om:demography -->
   <!-- Required: specification of model outputs. -->
   <monitoring name="...">
     <!-- Optional: "continuous" outputs. -->
@@ -37,35 +40,38 @@ all instances of the number (32), except that versions <32 are different. -->
   <entomology ... />
   <!-- Optional: drug library.
   This describes how those drugs act and decay (PK and PD). -->
-  <pharmacology>
-    ...
-  </pharmacology>
-  <model>
-    <ModelOptions>
-      <!-- Some on/off options go here. Note that many options should not be
-      changed except when starting a new fitting run: don't change without
-      checking! -->
-      ...
-    </ModelOptions>
-    <clinical healthSystemMemory="...">
-      <!-- optional: non-malaria fever data -->
-      <NonMalariaFevers ... />
-    </clinical>
-    <human>
-      <!-- Required: human vector availability data. -->
-      <availabilityToMosquitoes ... />
-      <!-- Optional: human body mass. -->
-      <weight ... />
-    </human>
-    <!-- Required: model parameters. This comes from model fitting.
-    "interval" is the number of days per update step (1 or 5); much other data
-    depends on this so don't change except by selecting another base scenario.
-    "iseed" is the random number seed. If non-zero it should ideally be a
-    prime. Experiment creator tools set this for you.
-    "latentp" is the duration of latent period of an infection, i.e. from
-    inoculation by mosquito to the first day the infection is patent. -->
-    <parameters interval="1" iseed="0" latentp="15d">
-      ...
-    </parameters>
-  </model>
+  <!-- optional placeholder: om:pharmacology -->
+  <!-- The model section is currently set as a single snippet, but some
+     - parts can be changed.
+     - 
+     - <model>
+     -   <ModelOptions>
+     -   Some on/off options go here. Note that many options should not be
+     -   changed except when starting a new fitting run: don't change without
+     -   checking!
+     -   </ModelOptions>
+     -   Health system memory can be changed:
+     -   <clinical healthSystemMemory="...">
+     -     Non-malaria fever data can be included here:
+     -     <NonMalariaFevers ... />
+     -   </clinical>
+     -   <human>
+     -     Required: human vector availability data:
+     -     <availabilityToMosquitoes ... />
+     -     Optional: human body mass:
+     -     <weight ... />
+     -   </human>
+     -   Required: model parameters. This comes from model fitting.
+     -   "interval" is the number of days per update step (1 or 5); much other data
+     -   depends on this so don't change except by selecting another base scenario.
+     -   "iseed" is the random number seed. If non-zero it should ideally be a
+     -   prime. Experiment creator tools set this for you.
+     -   "latentp" is the duration of latent period of an infection, i.e. from
+     -   inoculation by mosquito to the first day the infection is patent.
+     -   <parameters interval="1" iseed="0" latentp="15d">
+     -     ...
+     -   </parameters>
+     - </model>
+  -->
+  <!-- placeholder: om:model -->
 </om:scenario>
