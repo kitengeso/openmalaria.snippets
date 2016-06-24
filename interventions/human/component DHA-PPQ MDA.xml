@@ -1,0 +1,18 @@
+<!-- min-version: 33 -->
+<!-- snippet: om:human-intervention-component -->
+<!-- disclaimer: this may not work as intended -->
+<!-- MDA with DHA Piperaquine 
+     Source: 2014-07-16-KK-MSAT-MDA experiment
+     Converted to v33 by TS & PPR
+        -->
+      <component id="DHAPPQ" name="DHAPPQ treatment modelled via simple blood clearance">
+        <treatSimple durationBlood="1t"/>
+      </component>
+      <component id="DHAPPQ-PEV" name="prophylactic affect modelled via PEV vaccine">
+        <!-- this reduces the chance of re-infection after DHAPPQ treatment -->
+        <PEV>
+          <decay L="0.033501" function="weibull" k="0.799713"/>
+            <efficacyB value="1000"/>
+          <initialEfficacy value="0.99"/>
+        </PEV>
+      </component>
