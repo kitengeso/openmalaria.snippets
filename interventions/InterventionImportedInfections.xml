@@ -1,5 +1,6 @@
 <!-- min-version: 33 -->
 <!-- snippet: om:intervention-elt -->
+<!-- disclaimer: this may not work as intended -->
 <!--- InterventionImportedInfections.xml
     source: adapted from
     https://github.com/SwissTPH/openmalaria/wiki/ModelIntervMisc#import-infections
