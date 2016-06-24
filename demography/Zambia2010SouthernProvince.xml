@@ -1,9 +1,14 @@
-   <!-- demographyZambia2010SouthernProvince 
-     Source: 2014-07-16-KK-MSAT-MDA experiment
-     Converted to v33 by TS & PPR
-	 scaledAnnualEIR must be entered to make this valid
-	 -->
-	 <demography maximumAgeYrs="90" name="Zambia 2010 census_Southern province " popSize="10000">
+<!-- min-version: 18 -->
+<!-- snippet: om:demography -->
+<!-- disclaimer: this may not work as intended -->
+  <!-- demographyZambia2010SouthernProvince 
+    Source: 2014-07-16-KK-MSAT-MDA experiment
+    Converted to v33 by TS & PPR
+    scaledAnnualEIR must be entered to make this valid
+    -->
+  <demography maximumAgeYrs="90"
+              name="Zambia 2010 census_Southern province"
+              popSize="10000">
     <ageGroup lowerbound="0">
       <group poppercent="3.6" upperbound="1"/>
       <group poppercent="14.1" upperbound="5"/>
