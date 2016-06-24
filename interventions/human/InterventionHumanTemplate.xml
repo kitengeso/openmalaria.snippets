@@ -1,0 +1,8 @@
+<!-- min-version: 32 -->
+<!-- snippet: om:human -->
+<!-- disclaimer: this may not work as intended -->
+<!-- Since version 32, some interventions have been grouped under 'human'. -->
+<human>
+  <!-- placeholder-multiple: om:human-intervention-component -->
+  <!-- placeholder-any: om:human-intervention-deployment -->
+</human>

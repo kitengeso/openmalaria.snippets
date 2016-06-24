@@ -36,6 +36,7 @@ all instances of the number (32), except that versions <32 are different. -->
   <interventions>
     <!-- placeholder-any: om:intervention-elt -->
     <!-- placeholder-optional: om:vectorPop -->
+    <!-- placeholder-optional: om:interv-human -->
   </interventions>
   <!-- Required: description of the (initial) health system. -->
   <!-- placeholder: om:healthSystem -->

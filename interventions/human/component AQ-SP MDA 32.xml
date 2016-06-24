@@ -1,0 +1,31 @@
+<!-- min-version: 32 -->
+<!-- max-version: 32 -->
+<!-- snippet: om:human-intervention-component -->
+<!-- disclaimer: this may not work as intended -->
+<!-- component AQ-SP MDA
+    Source: AQSP-SMC_and_RTSS experiment
+    MDA with AQ-SP combination assuming 7% resistance rate 
+    PEV effect is used to simulate the prophylactic period
+    -->
+<component id="MDA-AQ-SP">
+  <MDA>
+    <effects>
+      <option pSelection="0.93">
+        <clearInfections timesteps="1" stage="both"/> 
+        <deploy>
+          <component id="AQ-SP-PEV"/>
+        </deploy>
+      </option>
+      <option pSelection="0.07">
+        <!-- resistance — no effects -->
+      </option>
+    </effects>
+  </MDA>
+</component>
+<component id="AQ-SP-PEV">
+  <PEV>
+    <decay L="0.175496011811728" function="weibull" k="3.30019114668797"/>
+    <efficacyB value="1"/>
+    <initialEfficacy value="1.0"/>
+  </PEV>
+</component>
