@@ -1,27 +1,51 @@
 This is the OpenMalaria snippet library.
 ========================================
 
+## Organisation
+
+Snippets appear as XML (text) files, sometimes with a version number in the file name.
+This version number is the OpenMalaria schema version that the snippet was
+written for or checked against, however most snippets will be
+forward-compatible.
+
+There are no requirements about the directory structure or where files are in
+the library.
+
 ## Format ##
 
-This library contains a separate section for each OpenMalaria schema version.
-It is the responsibility of OpenMalaria developers to update snippets to the latest version. [OpenMalaria changelog](https://github.com/SwissTPH/openmalaria/wiki/Changelog)
+Each file contains some comments and a chunk of XML code which can be pasted
+into a larger OpenMalaria scenario XML.
 
-The snippets provided are sections of XML which can be copied into your scenario description under development.
-Template documents into which these snippets can be pasted should also be provided.
+Some special comments may appear at the beginning of the file:
 
-All snippets _should_ be documented with information on parameter sources.
+    <!-- min-version: 30 -->
+    <!-- max-version: 36 -->
+    <!-- snippet: om:demography -->
 
-There are currently no requirements on the content of snippets other than that it be clear to a human with a little familiarity with OpenMalaria XML documents how to make use of it.
+The min- and max-version tags specify limits to the range of compatible
+OpenMalaria versions. They do not need to appear; e.g. if the snippet is
+compatible with the latest version it doesn't make sense to specify the
+max-version (unless it is expected that the next version will be incompatible).
+
+The `snippet:` tag is used to specify where the snippet may appear; e.g. there
+should be a comment like the following somewhere in another snippet (a
+*template*):
+
+    <!-- placeholder: om:demography -->
+
+A variation of this hints that this part is optional, and can be omitted:
+
+    <!-- optional placeholder: om:pharmacology -->
+
+In addition, each file should contain some commentry of its source, its
+purpose and how its parameters were obtained.
 
 
 ## Contributions ##
 
 Contributions of new publishable and documented snippets are welcomed. If you can edit this wiki you should also be able to amend this library yourself, by cloning the git repository with this git-specific link: `git://github.com:SwissTPH/openmalaria.snippets`; alternatively contact the OpenMalaria developer.
 
-Snippets should be placed under the folder for the appropriate version in a sensible location (it may be necessary to rearrange other snippets; there is currently no defined organisation beyond versions). New snippets should also be updated to the latest version (by notifying someone able to do this if necessary).
-
 ## Schema documentation ##
 
-If you need to consult XML elements and attributes for a certain version select the appropriate version from here:
-[https://github.com/SwissTPH/openmalaria/wiki/GeneratedSchemaDocIndex](https://github.com/SwissTPH/openmalaria/wiki/GeneratedSchemaDocIndex)
-Those are automatically generated for every new schema version since version 2.
+If you need to consult XML elements and attributes for a certain version select
+[the appropriate version from here](https://github.com/SwissTPH/openmalaria/wiki/schema-index)
