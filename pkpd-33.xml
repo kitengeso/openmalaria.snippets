@@ -1,0 +1,167 @@
+<!-- min-version: 33 -->
+<!-- max-version: 33 -->
+<!-- snippet: om:pharmacology -->
+<!-- disclaimer: this may not work as intended -->
+  <pharmacology>
+    <!-- This is a library of drug parameters and treatment schedules
+    parameterised for OpenMalaria. All drug parameters were provided by
+    Katherine Kay (LSTM); schedules and dosage information has varying sources.
+    
+    This library can be copied into the relevant section of a scenario
+    document. Unused drugs, schedules and dosages may (if desired) be deleted.
+    -->
+    <treatments>
+      <schedule name="AL_full">
+        <!-- Recommended Artemether-Lumefantrine dosing schedule. -->
+        <!-- Dose sizes are single tablets; the separate dosage table lists -->
+        <!-- the number of tablets recommended. -->
+        <!-- Source: WHO / Novartis product information -->
+        <medicate drug="AR" hour="0" mg="20"/>
+        <medicate drug="LF" hour="0" mg="120"/>
+        <medicate drug="AR" hour="8" mg="20"/>
+        <medicate drug="LF" hour="8" mg="120"/>
+        <medicate drug="AR" hour="24" mg="20"/>
+        <medicate drug="LF" hour="24" mg="120"/>
+        <medicate drug="AR" hour="36" mg="20"/>
+        <medicate drug="LF" hour="36" mg="120"/>
+        <medicate drug="AR" hour="48" mg="20"/>
+        <medicate drug="LF" hour="48" mg="120"/>
+        <medicate drug="AR" hour="60" mg="20"/>
+        <medicate drug="LF" hour="60" mg="120"/>
+      </schedule>
+      <schedule name="AL_bad_adherence">
+        <medicate drug="AR" hour="0" mg="20"/>
+        <medicate drug="LF" hour="0" mg="120"/>
+      </schedule>
+      <schedule name="AS">
+        <!-- Artesunate IV, doses in mg/kg (duration must be > 0 for IV) -->
+        <medicate drug="AS" duration="0.001" hour="0" mg="2.4"/>
+        <medicate drug="AS" duration="0.001" hour="12" mg="2.4"/>
+        <medicate drug="AS" duration="0.001" hour="24" mg="2.4"/>
+        <medicate drug="AS" duration="0.001" hour="48" mg="2.4"/>
+        <medicate drug="AS" duration="0.001" hour="72" mg="2.4"/>
+      </schedule>
+      <dosages name="AL_age">
+        <!-- This dosing information was provided by Valerie Crowell; not sure of source -->
+        <age lowerbound="0" dose_mult="1"/>
+        <age lowerbound="3" dose_mult="2"/>
+        <age lowerbound="9" dose_mult="3"/>
+        <age lowerbound="15" dose_mult="4"/>
+      </dosages>
+      <dosages name="AL_mass">
+        <!-- Source: WHO / Novartis product information -->
+        <!-- Note: there is no recommended dose for <5kg, but WHO guidelines
+          are to use (certain) ACTs anyway. -->
+        <bodymass lowerbound="0" dose_mult="1"/>
+        <bodymass lowerbound="15" dose_mult="2"/><!-- 2 tablets -->
+        <bodymass lowerbound="25" dose_mult="3"/><!-- 3 tablets -->
+        <bodymass lowerbound="35" dose_mult="4"/><!-- 4 tablets. -->
+        <!-- Note: WHO points out there is a lack of evidence about dosing
+          large adults, thus does not recommend higher doses. -->
+      </dosages>
+      <dosages name="AS">
+        <!-- Dosage "table" for AS IV (which doesn't need to do anything). -->
+        <age lowerbound="0" dose_mult="1"/>
+      </dosages>
+    </treatments>
+    <drugs>
+      <drug abbrev="AR"><!-- Artemether -->
+        <PD>
+          <phenotype name="sensitive">
+            <max_killing_rate>27.6</max_killing_rate>
+            <IC50>0.0023</IC50>
+            <slope>4</slope>
+          </phenotype>
+        </PD>
+        <PK>
+          <negligible_concentration>1e-17</negligible_concentration>
+          <half_life>0.1750372</half_life>
+          <vol_dist>17.4</vol_dist>
+        </PK>
+      </drug>
+      <drug abbrev="AS"><!-- Artesunate -->
+        <PD>
+          <phenotype name="sensitive">
+            <max_killing_rate>27.6</max_killing_rate>
+            <IC50>0.0016</IC50>
+            <slope>4</slope>
+          </phenotype>
+        </PD>
+        <PK>
+          <negligible_concentration>1e-17</negligible_concentration>
+          <half_life>0.04175585</half_life>
+          <vol_dist>2.75</vol_dist>
+        </PK>
+      </drug>
+      <drug abbrev="DHA"><!-- Dihydroartemisinin -->
+        <PD>
+          <phenotype name="sensitive">
+            <max_killing_rate>27.6</max_killing_rate>
+            <IC50>0.009</IC50>
+            <slope>4</slope>
+          </phenotype>
+        </PD>
+        <PK>
+          <negligible_concentration>1e-17</negligible_concentration>
+          <half_life>0.03500743</half_life>
+          <vol_dist>1.49</vol_dist>
+        </PK>
+      </drug>
+      <drug abbrev="CQ"><!-- Chloroquine -->
+        <PD>
+          <phenotype name="sensitive">
+            <max_killing_rate>3.45</max_killing_rate>
+            <IC50>0.02</IC50>
+            <slope>1.6</slope>
+          </phenotype>
+        </PD>
+        <PK>
+          <negligible_concentration>0.00036</negligible_concentration>
+          <half_life>30.006</half_life>
+          <vol_dist>300</vol_dist>
+        </PK>
+      </drug>
+      <drug abbrev="LF"><!-- Lumefantrine -->
+        <PD>
+          <phenotype name="sensitive">
+            <max_killing_rate>3.45</max_killing_rate>
+            <IC50>0.032</IC50>
+            <slope>4</slope>
+          </phenotype>
+        </PD>
+        <PK>
+          <negligible_concentration>0.00032</negligible_concentration>
+          <half_life>4.332</half_life>
+          <vol_dist>21</vol_dist>
+        </PK>
+      </drug>
+      <drug abbrev="MQ"><!-- Mefloquine -->
+        <PD>
+          <phenotype name="sensitive">
+            <max_killing_rate>3.45</max_killing_rate>
+            <IC50>0.027</IC50>
+            <slope>5</slope>
+          </phenotype>
+        </PD>
+        <PK>
+          <negligible_concentration>0.005</negligible_concentration>
+          <half_life>13.078</half_life>
+          <vol_dist>20.8</vol_dist>
+        </PK>
+      </drug>
+      <drug abbrev="PPQ"><!-- Piperaquine -->
+        <PD>
+          <phenotype name="sensitive">
+            <max_killing_rate>3.45</max_killing_rate>
+            <IC50>0.088</IC50><!-- this is for the 1-compartment model -->
+            <slope>6</slope>
+          </phenotype>
+        </PD>
+        <PK>
+          <negligible_concentration>0.005</negligible_concentration>
+          <half_life>23.105</half_life>
+          <vol_dist>150</vol_dist>
+        </PK>
+      </drug>
+    </drugs>
+  </pharmacology>

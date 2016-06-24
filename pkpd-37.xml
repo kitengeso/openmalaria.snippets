@@ -1,3 +1,10 @@
+<!-- min-version: 37 -->
+<!--TODO: check when version 37 is released, since this was written before! -->
+<!-- NOTE: this adds conversion model parameters, since these models were not
+   - functioning properly in older OpenMalaria versions. -->
+<!-- snippet: om:pharmacology -->
+<!-- disclaimer: this may not work as intended -->
+<!-- Data checked against unit test / LSTM script on 2016-06-23 -->
   <pharmacology>
     <!-- This is a library of drug parameters and treatment schedules
     parameterised for OpenMalaria. All drug parameters were provided by
@@ -10,11 +17,15 @@
     should be.
     -->
     <treatments>
+        <!-- Note that most of these simply give a fixed dosage per person,
+           - instead of modelling dose based on weight or age.
+           - This can be done; see dosages examples below (which multiply
+           - dose) and documentation on wiki). -->
       <schedule name="AL_full">
-        <!-- Recommended Artemether-Lumefantrine dosing schedule. -->
-        <!-- Dose sizes are single tablets; the separate dosage table lists -->
-        <!-- the number of tablets recommended. -->
-        <!-- Source: WHO / Novartis product information -->
+        <!-- Recommended Artemether-Lumefantrine dosing schedule.
+           - Dose sizes are single tablets; the separate dosage table lists
+           - the number of tablets recommended.
+           - Source: WHO / Novartis product information -->
         <medicate drug="AR" hour="0" mg="20"/>
         <medicate drug="LF" hour="0" mg="120"/>
         <medicate drug="AR" hour="8" mg="20"/>
@@ -32,13 +43,46 @@
         <medicate drug="AR" hour="0" mg="20"/>
         <medicate drug="LF" hour="0" mg="120"/>
       </schedule>
+      <schedule name="AR">
+        <!-- schedule as used by KK & IH -->
+        <!-- dosage is 1.7mg/kg; assuming weight of 50kg gives 85mg -->
+        <medicate drug="AR" hour="0" mg="85"/>
+        <medicate drug="AR" hour="12" mg="85"/>
+        <medicate drug="AR" hour="24" mg="85"/>
+        <medicate drug="AR" hour="36" mg="85"/>
+        <medicate drug="AR" hour="48" mg="85"/>
+        <medicate drug="AR" hour="60" mg="85"/>
+      </schedule>
       <schedule name="AS">
-        <!-- TODO: what is this? Artesunate IV - needs a duration parameter? Are doses in mg/kg? -->
-        <medicate drug="AS" hour="0" mg="2.4"/>
-        <medicate drug="AS" hour="12" mg="2.4"/>
-        <medicate drug="AS" hour="24" mg="2.4"/>
-        <medicate drug="AS" hour="48" mg="2.4"/>
-        <medicate drug="AS" hour="72" mg="2.4"/>
+        <!-- schedule as used by KK & IH -->
+        <!-- dosage is 4mg/kg; assuming weight of 50kg gives 200mg -->
+        <medicate drug="AS" hour="0" mg="200"/>
+        <medicate drug="AS" hour="24" mg="200"/>
+        <medicate drug="AS" hour="48" mg="200"/>
+      </schedule>
+      <schedule name="LF">
+        <!-- schedule as used by KK & IH -->
+        <!-- dosage is 12mg/kg; assuming weight of 50kg gives 600mg -->
+        <medicate drug="AR" hour="0" mg="600"/>
+        <medicate drug="AR" hour="12" mg="600"/>
+        <medicate drug="AR" hour="24" mg="600"/>
+        <medicate drug="AR" hour="36" mg="600"/>
+        <medicate drug="AR" hour="48" mg="600"/>
+        <medicate drug="AR" hour="60" mg="600"/>
+      </schedule>
+      <schedule name="MQ">
+        <!-- schedule as used by KK & IH -->
+        <!-- dosage is 8.3mg/kg; assuming weight of 50kg gives 415mg -->
+        <medicate drug="AS" hour="0" mg="415"/>
+        <medicate drug="AS" hour="24" mg="415"/>
+        <medicate drug="AS" hour="48" mg="415"/>
+      </schedule>
+      <schedule name="PPQ">
+        <!-- schedule as used by KK & IH -->
+        <!-- dosage is 18mg/kg; assuming weight of 50kg gives 900mg -->
+        <medicate drug="AS" hour="0" mg="900"/>
+        <medicate drug="AS" hour="24" mg="900"/>
+        <medicate drug="AS" hour="48" mg="900"/>
       </schedule>
       <dosages name="AL_age">
         <!-- This dosing information was provided by Valerie Crowell; not sure of source -->
@@ -58,13 +102,9 @@
         <!-- Note: WHO points out there is a lack of evidence about dosing
           large adults, thus does not recommend higher doses. -->
       </dosages>
-      <dosages name="AS">
-        <!-- TODO: what is this? Artesunate IV with some units? -->
-        <age lowerbound="0" dose_mult="1"/>
-      </dosages>
     </treatments>
     <drugs>
-      <drug abbrev="AR"><!-- Artemether -->
+      <drug abbrev="AR"><!-- Artemether, conversion model -->
         <PD>
           <phenotype name="sensitive">
             <max_killing_rate>27.6</max_killing_rate>
@@ -74,11 +114,83 @@
         </PD>
         <PK>
           <negligible_concentration>1e-17</negligible_concentration>
-          <half_life>0.1750372</half_life>
+          <k mean="0"/>
+          <m_exponent>0</m_exponent>
+          <k_a mean="23.98"/>
+          <vol_dist>46.6</vol_dist>
+          <conversion>
+            <metabolite>DHA_AR<metabolite/>
+            <rate mean="11.98"/>
+            <molRatio>0.9547587</molRatio>
+          </conversion>
+        </PK>
+      </drug>
+      <drug abbrev="DHA_AR"><!-- DHA derived from Artemether -->
+        <PD>
+          <phenotype name="sensitive">
+            <max_killing_rate>27.6</max_killing_rate>
+            <IC50>0.009</IC50>
+            <slope>4</slope>
+          </phenotype>
+        </PD>
+        <PK>
+          <negligible_concentration>1e-17</negligible_concentration>
+          <k mean="44.15"/>
+          <m_exponent>0</m_exponent>
+          <vol_dist>15</vol_dist>
+        </PK>
+      </drug>
+      <drug abbrev="AR1"><!-- Artemether, one compartment model -->
+        <PD>
+          <phenotype name="sensitive">
+            <max_killing_rate>27.6</max_killing_rate>
+            <IC50>0.0023</IC50>
+            <slope>4</slope>
+          </phenotype>
+        </PD>
+        <PK>
+          <negligible_concentration>1e-17</negligible_concentration>
+          <k mean="3.96"/>
           <vol_dist>17.4</vol_dist>
         </PK>
       </drug>
-      <drug abbrev="AS"><!-- Artesunate -->
+      <drug abbrev="AS"><!-- Artesunate, conversion model -->
+        <PD>
+          <phenotype name="sensitive">
+            <max_killing_rate>27.6</max_killing_rate>
+            <IC50>0.0016</IC50>
+            <slope>4</slope>
+          </phenotype>
+        </PD>
+        <PK>
+          <negligible_concentration>1e-45</negligible_concentration>
+          <k mean="0"/>
+          <m_exponent>0</m_exponent>
+          <k_a mean="252"/>
+          <vol_dist>7.1</vol_dist>
+          <conversion>
+            <metabolite>DHA_AS<metabolite/>
+            <rate mean="30.96"/>
+            <molRatio>0.741155</molRatio>
+          </conversion>
+        </PK>
+      </drug>
+      <drug abbrev="DHA_AS"><!-- DHA derived from Artesunate -->
+        <PD>
+          <phenotype name="sensitive">
+            <max_killing_rate>27.6</max_killing_rate>
+            <IC50>0.009</IC50>
+            <slope>4</slope>
+          </phenotype>
+        </PD>
+        <PK>
+          <negligible_concentration>1e-35</negligible_concentration>
+          <k mean="25.4"/>
+          <m_exponent>0</m_exponent>
+          <vol_dist>1.49</vol_dist>
+        </PK>
+      </drug>
+      <drug abbrev="AS1"><!-- Artesunate, one compartment model -->
         <PD>
           <phenotype name="sensitive">
             <max_killing_rate>27.6</max_killing_rate>
@@ -88,7 +200,8 @@
         </PD>
         <PK>
           <negligible_concentration>1e-17</negligible_concentration>
-          <half_life>0.04175585</half_life>
+          <k mean="16.6"/>
+          <m_exponent>0</m_exponent>
           <vol_dist>2.75</vol_dist>
         </PK>
       </drug>
@@ -102,7 +215,8 @@
         </PD>
         <PK>
           <negligible_concentration>1e-17</negligible_concentration>
-          <half_life>0.03500743</half_life>
+          <k mean="19.8"/>
+          <m_exponent>0</m_exponent>
           <vol_dist>1.49</vol_dist>
         </PK>
       </drug>
@@ -130,12 +244,9 @@
         </PD>
         <PK>
           <negligible_concentration>0.00032</negligible_concentration>
-          <half_life>4.332</half_life>
+          <k mean="0.16"/>
+          <m_exponent>0</m_exponent>
           <vol_dist>21</vol_dist>
-          <compartment2>
-            <k12 mean="..."/>
-            <k21 mean="..."/>
-          </compartment2>
         </PK>
       </drug>
       <drug abbrev="MQ"><!-- Mefloquine -->
@@ -156,13 +267,14 @@
         <PD>
           <phenotype name="sensitive">
             <max_killing_rate>3.45</max_killing_rate>
-            <IC50>0.088</IC50><!-- this is for the 1-compartment model -->
+            <IC50>0.020831339</IC50>
             <slope>6</slope>
           </phenotype>
         </PD>
         <PK>
           <negligible_concentration>0.005</negligible_concentration>
-          <half_life>23.105</half_life>
+          <k mean="0.03"/>
+          <m_exponent>0</m_exponent>
           <vol_dist>150</vol_dist>
         </PK>
       </drug>
@@ -175,18 +287,18 @@
           </phenotype>
         </PD>
         <PK>
-          <!--TODO: set sigmas-->
           <negligible_concentration>0.005</negligible_concentration>
           <k mean="0.6242774566473989" sigma="0"/>
           <m_exponent>0.25</m_exponent>
           <vol_dist>173</vol_dist>
+          <k_a mean="11.16"/>
           <compartment2>
             <a12 mean="8.46242774566474" sigma="0"/>
             <a21 mean="3.3058064516129035" sigma="0"/>
           </compartment2>
         </PK>
       </drug>
-      <drug abbrev="PPQ"><!-- Piperaquine 3-compartment Tarning 2012 AAC -->
+      <drug abbrev="PPQ3"><!-- Piperaquine 3-compartment Tarning 2012 AAC -->
         <PD>
           <phenotype name="sensitive">
             <max_killing_rate>3.45</max_killing_rate>
@@ -195,7 +307,6 @@
           </phenotype>
         </PD>
         <PK>
-          <!--TODO: set sigmas-->
           <negligible_concentration>0.005</negligible_concentration>
           <k mean="16.314788273615637" sigma="0"/>
           <m_exponent>1</m_exponent>

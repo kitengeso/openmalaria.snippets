@@ -1,3 +1,7 @@
+<!-- min-version: 32 -->
+<!-- max-version: 32 -->
+<!-- snippet: om:pharmacology -->
+<!-- disclaimer: this may not work as intended -->
   <pharmacology>
     <!-- This is a library of drug parameters available in OpenMalaria.
     All parameters were provided by Katherine Kay (LSTM).
