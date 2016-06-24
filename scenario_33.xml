@@ -35,7 +35,7 @@ all instances of the number (33), except that versions <32 are different. -->
   <!-- Required: description of all interventions. Can be empty. -->
   <interventions ... />
   <!-- Required: description of the (initial) health system. -->
-  <healthSystem ... />
+  <!-- placeholder: om:healthSystem -->
   <!-- Required: vector and transmission data. -->
   <!-- placeholder: entomology -->
   <!-- Optional: description of parasite genetics and resistance. -->
