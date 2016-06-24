@@ -1,0 +1,7 @@
+<!-- min-version: 31 -->
+<!-- snippet: om:vectorPop -->
+<!-- disclaimer: this may not work as intended -->
+<!-- Since version 31, some interventions have been grouped under 'vectorPop'. -->
+<vectorPop>
+  <!-- placeholder-multiple: om:vector-pop-intervention -->
+</vectorPop>

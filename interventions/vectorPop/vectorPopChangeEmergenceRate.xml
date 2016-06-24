@@ -1,0 +1,23 @@
+<!-- min-version: 33 -->
+<!-- snippet: om:vector-pop-intervention -->
+<!-- disclaimer: this may not work as intended -->
+<!-- vectorPopChangeEmergenceRate.xml
+Multiplies the emergence rate (by 1 - "initial") to simulate removal of vector control 
+  -->
+  <intervention name="Remove vector control">
+    <description>
+      <anopheles mosquito="arabiensis">
+        <emergenceReduction initial="-0.2">
+          <decay function="constant"/>
+        </emergenceReduction>
+      </anopheles>
+      <anopheles mosquito="funestus">
+        <emergenceReduction initial="-0.2">
+          <decay function="constant"/>
+        </emergenceReduction>
+      </anopheles>
+    </description>
+    <timed>
+      <deploy time="146t"/>
+    </timed>
+  </intervention>

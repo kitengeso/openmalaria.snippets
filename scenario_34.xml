@@ -34,7 +34,8 @@ all instances of the number (34), except that versions <32 are different. -->
   </monitoring>
   <!-- Required: description of all interventions. Can be empty. -->
   <interventions>
-    <!-- placeholder any: om:intervention-elt -->
+    <!-- placeholder-any: om:intervention-elt -->
+    <!-- placeholder-optional: om:vectorPop -->
   </interventions>
   <!-- Required: description of the (initial) health system. -->
   <!-- placeholder: om:healthSystem -->
@@ -44,9 +45,9 @@ all instances of the number (34), except that versions <32 are different. -->
   <parasiteGenetics ... />
   <!-- Optional: drug library.
   This describes how those drugs act and decay (PK and PD). -->
-  <!-- placeholder optional: om:pharmacology -->
+  <!-- placeholder-optional: om:pharmacology -->
   <!-- Optional: diagnostics library -->
-  <!-- placeholder optional: om:diagnostics -->
+  <!-- placeholder-optional: om:diagnostics -->
   <!-- The model section is currently set as a single snippet, but some
      - parts can be changed.
      - 
