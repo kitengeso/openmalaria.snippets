@@ -22,7 +22,7 @@ all instances of the number (34), except that versions <32 are different. -->
   <!-- Required: specification of model outputs. -->
   <monitoring name="...">
     <!-- Optional: "continuous" outputs. -->
-    <continuous .../>
+    <!-- placeholder-optional: om:mon-continuous -->
     <!-- Required: outputs for surveys (not continuous). -->
     <SurveyOptions .../>
     <!-- Required: survey times and diagnostic. -->

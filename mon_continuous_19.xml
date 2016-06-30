@@ -1,0 +1,22 @@
+<!-- min-version: 19 -->
+<!-- snippet: om:mon-continuous -->
+<!-- disclaimer: this may not work as intended -->
+<!-- The continuous monitoring system allows some different model outputs
+   - every step or according to some regular period (e.g. period="1" for every
+   - step, or in recent versions, period="5d" or "1y" etc.) -->
+   <!-- See here for a list of available outputs: https://github.com/SwissTPH/openmalaria/wiki/XmlMonitoring#continuous-measures -->
+    <continuous period="1">
+      <option name="input EIR" value="true"/>
+      <option name="simulated EIR" value="true"/>
+      <option name="human infectiousness" value="true"/>
+      <option name="N_v0" value="true"/>
+      <option name="immunity h" value="true"/>
+      <option name="immunity Y" value="true"/>
+      <option name="new infections" value="true"/>
+      <option name="num transmitting humans" value="true"/>
+      <option name="ITN coverage"/>
+      <option name="GVI coverage"/>
+      <option name="alpha" value="true"/>
+      <option name="P_B" value="false"/>
+      <option name="P_C*P_D" value="false"/>
+    </continuous>
