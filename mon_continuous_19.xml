@@ -4,7 +4,7 @@
 <!-- The continuous monitoring system allows some different model outputs
    - every step or according to some regular period (e.g. period="1" for every
    - step, or in recent versions, period="5d" or "1y" etc.) -->
-   <!-- See here for a list of available outputs: https://github.com/SwissTPH/openmalaria/wiki/XmlMonitoring#continuous-measures -->
+<!-- See here for a list of available outputs: https://github.com/SwissTPH/openmalaria/wiki/XmlMonitoring#continuous-measures -->
     <continuous period="1">
       <option name="input EIR" value="true"/>
       <option name="simulated EIR" value="true"/>

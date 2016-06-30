@@ -1,0 +1,31 @@
+<!-- min-version: 13 -->
+<!-- snippet: om:mon-survey-options -->
+<!-- disclaimer: this may not work as intended -->
+<!-- This configures which outputs you get from the main monitoring system.  -->
+<!-- See here for a list of available outputs: https://github.com/SwissTPH/openmalaria/wiki/XmlMonitoring#survey-measures -->
+    <SurveyOptions>
+      <option name="nHost" value="true"/>
+      <option name="nPatent" value="true"/>
+      <option name="sumlogDens" value="true"/>
+      <option name="nTransmit" value="true"/>
+      <option name="nTreatments1" value="true"/>
+      <option name="nTreatments2" value="true"/>
+      <option name="nTreatments3" value="true"/>
+      <option name="nUncomp" value="true"/>
+      <option name="nSevere" value="true"/>
+      <option name="nDirDeaths" value="true"/>
+      <option name="nEPIVaccinations" value="true"/>
+      <option name="nMassVaccinations" value="true"/>
+      <option name="annAvgK" value="true"/>
+      <option name="Vector_Nv0" value="true"/>
+      <option name="Vector_Nv" value="true"/>
+      <option name="Vector_Ov" value="true"/>
+      <option name="Vector_Sv" value="true"/>
+      <option name="inputEIR" value="true"/>
+      <option name="simulatedEIR" value="true"/>
+      <option name="allCauseIMR"/>
+      <option name="nMDAs"/>
+      <option name="nCtsMDA"/>
+      <option name="nMassGVI"/>
+      <option name="nEPI_ITNs"/>
+    </SurveyOptions>
