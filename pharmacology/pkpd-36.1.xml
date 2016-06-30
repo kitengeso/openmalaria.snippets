@@ -1,7 +1,7 @@
-<!-- min-version: 37 -->
-<!--TODO: check when version 37 is released, since this was written before! -->
+<!-- min-version: 36.1 -->
 <!-- NOTE: this adds conversion model parameters, since these models were not
-   - functioning properly in older OpenMalaria versions. -->
+   - functioning properly in older OpenMalaria versions. The model will run in
+   - earlier versions, but generate the wrong output. -->
 <!-- snippet: om:pharmacology -->
 <!-- disclaimer: this may not work as intended -->
 <!-- Data checked against unit test / LSTM script on 2016-06-23 -->
