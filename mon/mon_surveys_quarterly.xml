@@ -1,0 +1,10 @@
+<!-- min-version: 33 -->
+<!-- snippet: om:mon-surveys -->
+<!-- disclaimer: this may not work as intended -->
+<!-- detectionLimit may be changed or replaced with diagnostic="..." -->
+    <surveys detectionLimit="40">
+      <surveyTime repeatStep="1y" repeatEnd="20.027y">1t</surveyTime>
+      <surveyTime repeatStep="1y" repeatEnd="20.027y">19t</surveyTime>
+      <surveyTime repeatStep="1y" repeatEnd="20.027y">37t</surveyTime>
+      <surveyTime repeatStep="1y" repeatEnd="20.027y">55t</surveyTime>
+    </surveys>

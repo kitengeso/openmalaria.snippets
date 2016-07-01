@@ -1,0 +1,17 @@
+<!-- min-version: 1 -->
+<!-- snippet: om:mon-age-group -->
+<!-- disclaimer: this may not work as intended -->
+<!-- This configures which age groups outputs are summarised by.  -->
+    <ageGroup lowerbound="0.0">
+      <group upperbound="1"/>
+      <group upperbound="2"/>
+      <group upperbound="5"/>
+      <group upperbound="10"/>
+      <group upperbound="20"/>
+      <group upperbound="30"/>
+      <group upperbound="40"/>
+      <group upperbound="50"/>
+      <group upperbound="60"/>
+      <group upperbound="70"/>
+      <group upperbound="99"/>
+    </ageGroup>

@@ -26,11 +26,11 @@ all instances of the number (34), except that versions <32 are different. -->
     <!-- Required: outputs for surveys (not continuous). -->
     <!-- placeholder: om:mon-survey-options -->
     <!-- Required: survey times and diagnostic. -->
-    <surveys .../>
+    <!-- placeholder: om:mon-surveys -->
     <!-- Required: age groups for surveys. -->
-    <ageGroup .../>
+    <!-- placeholder: om:mon-age-group -->
     <!-- Optional: cohorts. -->
-    <cohorts .../>
+    <!-- placeholder-optional: om:mon-cohorts -->
   </monitoring>
   <!-- Required: description of all interventions. Can be empty. -->
   <interventions>

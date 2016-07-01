@@ -1,0 +1,7 @@
+<!-- min-version: 32 -->
+<!-- snippet: om:mon-cohorts -->
+<!-- disclaimer: this may not work as intended -->
+<!-- This configures cohorts. See: https://github.com/SwissTPH/openmalaria/wiki/Monitoring#monitoring-of-sub-populations-version-32-on -->
+    <cohorts>
+      <subPop id="cohort" number="1"/>
+    </cohorts>
