@@ -43,7 +43,7 @@ all instances of the number (36), except that versions <32 are different. -->
   <!-- Required: vector and transmission data. -->
   <!-- placeholder: entomology -->
   <!-- Optional: description of parasite genetics and resistance. -->
-  <parasiteGenetics ... />
+  <!-- placeholder-optional: om:parasite-genetics -->
   <!-- Optional: drug library.
   This describes how those drugs act and decay (PK and PD). -->
   <!-- placeholder-optional: om:pharmacology -->

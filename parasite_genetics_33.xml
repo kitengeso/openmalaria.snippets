@@ -1,0 +1,13 @@
+<!-- min-version: 33 -->
+<!-- snippet: om:parasite-genetics -->
+<!-- disclaimer: this may not work as intended -->
+<!-- This configures parasite genetics (for drug resistance modelling). -->
+<!-- See: https://github.com/SwissTPH/openmalaria/wiki/DrugResistanceGenotypes -->
+  <parasiteGenetics samplingMode="tracking">
+    <!-- Define name/freq/fitness of the locus/alleles defined in the drugPD code -->
+    <locus name="x">
+      <allele name="sensitive" initialFrequency="0.34" fitness="1"/>
+      <allele name="resistant" initialFrequency="0.33" fitness="1"/>
+      <allele name="highly resistant" initialFrequency="0.33" fitness="1"/>
+    </locus>
+  </parasiteGenetics>
