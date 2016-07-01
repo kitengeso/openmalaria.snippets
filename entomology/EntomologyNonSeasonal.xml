@@ -5,7 +5,11 @@
       source: 2014-02-12-MP-WHO-prevEIRincidenceRelationships, 
       three mosquito nonseasonal entomology model,
       included in snippet library by PPR
-      @EIR@ to be replaced by annual scaled value--->
+      @EIR@ to be replaced by annual scaled value
+      Note that this is in "forced" mode which means the force of infection
+      from vectors is not influenced by human infectiousness. Alternatively use
+      mode "dynamic".
+      --->
           
 <entomology mode="forced" name="one species" scaledAnnualEIR="@EIR@">
   <vector>
