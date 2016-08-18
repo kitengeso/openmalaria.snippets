@@ -3,7 +3,8 @@
 <!-- disclaimer: this may not work as intended -->
 <!-- An example description of non-vector model input.
    - Copied from a test scenario; please check values before usage. -->
-  <entomology mode="dynamic" name="Namawala1_16*1.0">
+<!-- The annual scaled EIR in this example is 64, but can be freely changed-->   
+  <entomology mode="dynamic" name="Namawala1_16*1.0" scaledAnnualEIR="64">
     <nonVector eipDuration="10">
       <EIRDaily origin="Namawala Pre">0.011646449</EIRDaily>
       <EIRDaily origin="Namawala Pre">0.012176484</EIRDaily>
