@@ -49,39 +49,45 @@ all instances of the number (35), except that versions <32 are different. -->
   <!-- placeholder-optional: om:pharmacology -->
   <!-- Optional: diagnostics library -->
   <!-- placeholder-optional: om:diagnostics -->
-  <!-- The model section is currently set as a single snippet, but some
-     - parts can be changed.
-     - 
-     - <model>
-     -   <ModelOptions>
-     -   Some on/off options go here. Note that many options should not be
-     -   changed except when starting a new fitting run: don't change without
-     -   checking!
-     -   </ModelOptions>
-     -   Health system memory can be changed:
-     -   <clinical healthSystemMemory="...">
-     -     Optional: specification of the diagnostic used to fit the neonatal mortality model.
-     -     <NeonatalMortality ... />
-     -     Non-malaria fever data can be included here:
-     -     <NonMalariaFevers ... />
-     -   </clinical>
-     -   <human>
-     -     Required: human vector availability data:
-     -     <availabilityToMosquitoes ... />
-     -     Optional: human body mass:
-     -     <weight ... />
-     -   </human>
-     -   Required: model parameters. This comes from model fitting.
-     -   "interval" is the number of days per update step (1 or 5); much other data
-     -   depends on this so don't change except by selecting another base scenario.
-     -   "iseed" is the random number seed. If non-zero it should ideally be a
-     -   prime. Experiment creator tools set this for you.
-     -   "latentp" is the duration of latent period of an infection, i.e. from
-     -   inoculation by mosquito to the first day the infection is patent.
-     -   <parameters interval="1" iseed="0" latentp="15d">
-     -     ...
-     -   </parameters>
-     - </model>
-  -->
-  <!-- placeholder: om:model -->
+  
+  <!-- (Within-host) model section. -->
+  <model>
+    <!-- ModelOptions describe within-host model parameters. Many of these
+      - affect parameterisation, and should be set correctly for each set of
+      - parameters used from a fitting run. -->
+    <ModelOptions>
+      <!-- placeholder: om:model-param-opts -->
+      <!-- placeholder-any: om:model-extra-opts -->
+    </ModelOptions>
+    <!-- Clinical describes some health-system related parameters.
+      - Health system memory is commonly set at 30 days, but can be adjusted. -->
+    <clinical healthSystemMemory="30d">
+      <!-- Optional: specification of the diagnostic used to fit the neonatal mortality model. -->
+      <!-- placeholder-optional: om:model-neonatal -->
+      <!-- Non-malaria fever data may be specified here. -->
+      <!-- placeholder-optional: om:model-nmf -->
+    </clinical>
+    <!-- human describes human-related parameters -->
+    <human>
+      <!-- Required: human vector availability data -->
+      <!-- placeholder: om:model-human-avail -->
+      <!-- Optional: human body mass (weight) data -->
+      <!-- placeholder-optional: om:model-human-weight -->
+    </human>
+    <!-- vivax describes vivax-model parameters, if this model is used -->
+    <!-- placeholder-optional: om:model-vivax -->
+    <!-- The parameters element describes fitting parameters. These should be
+      - taken from the output of one of the fitting runs, and used with the
+      - correct ModelOptions.
+      -   "interval" is the number of days per update step (1 or 5); much other data
+      -   depends on this so don't change except by selecting another base scenario.
+      -   "iseed" is the random number seed. If non-zero it should ideally be a
+      -   prime. Experiment creator tools set this for you.
+      -   "latentp" is the duration of latent period of an infection, i.e. from
+      -   inoculation by mosquito to the first day the infection is patent.
+      -->
+    <parameters interval="1" iseed="0" latentp="15d">
+      <!-- placeholder: om:model-parameters -->
+    </parameters>
+  </model>
 </om:scenario>

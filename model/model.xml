@@ -1,0 +1,25 @@
+<!-- min-version: 33 -->
+<!-- snippet: om:model -->
+<!-- disclaimer: this may not work as intended -->
+  <model>
+    <!-- ModelOptions describe within-host model parameters; some to do with
+      - fitting and some opitonal ones -->
+    <ModelOptions>
+      <!-- placeholder: om:model-param-opts -->
+    </ModelOptions>
+    
+    <!-- clinical describes some health-system related parameters -->
+    <!-- placeholder: om:model-clinical -->
+    
+    <!-- human describes human-related parameters -->
+    <!-- placeholder: om:model-human -->
+    
+    <!-- vivax describes vivax-model parameters, if this model is used -->
+    <!-- placeholder-optional: om:model-vivax -->
+    
+    <!-- the parameters element describes fitting parameters -->
+    <!-- iseed is normally changed during an experiment -->
+    <parameters interval="5" iseed="0" latentp="15d">
+      <!-- placeholder: om:model-param-parameters -->
+    </parameters>
+  </model>

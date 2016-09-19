@@ -1,37 +1,13 @@
 <!-- min-version: 24 -->
-<!-- snippet: om:model -->
-  <model>
-    <ModelOptions>
+<!-- disclaimer: this may not work as intended -->
+<!-- These two snippets should be used together -->
+
+<!-- snippet: om:model-param-opts -->
       <option name="TREAT_HET" value="true"/>
       <option name="INNATE_MAX_DENS" value="false"/>
       <option name="INDIRECT_MORTALITY_FIX" value="false"/>
-    </ModelOptions>
-    <clinical healthSystemMemory="6"/>
-    <human>
-      <availabilityToMosquitoes>
-        <group lowerbound="0.0" value="0.225940909648"/>
-        <group lowerbound="1.0" value="0.286173633441"/>
-        <group lowerbound="2.0" value="0.336898395722"/>
-        <group lowerbound="3.0" value="0.370989854675"/>
-        <group lowerbound="4.0" value="0.403114915112"/>
-        <group lowerbound="5.0" value="0.442585112522"/>
-        <group lowerbound="6.0" value="0.473839351511"/>
-        <group lowerbound="7.0" value="0.512630464378"/>
-        <group lowerbound="8.0" value="0.54487872702"/>
-        <group lowerbound="9.0" value="0.581527755812"/>
-        <group lowerbound="10.0" value="0.630257580698"/>
-        <group lowerbound="11.0" value="0.663063362714"/>
-        <group lowerbound="12.0" value="0.702417432755"/>
-        <group lowerbound="13.0" value="0.734605377277"/>
-        <group lowerbound="14.0" value="0.788908765653"/>
-        <group lowerbound="15.0" value="0.839587932303"/>
-        <group lowerbound="20.0" value="1.0"/>
-        <group lowerbound="20.0" value="1.0"/>
-        <!-- repeated parameter *IS* required, otherwise interpolation will
-        make parameter continually increase and the "adult age" will be wrong. -->
-      </availabilityToMosquitoes>
-    </human>
-    <parameters interval="5" iseed="0" latentp="3">
+
+<!-- snippet: om:model-param-parameters -->
       <!-- run id=678  parameterization id=252458 sampling date=2009-11-27 10:12:13 lossfunction=69.963379 -->
       <parameter include="0" name="'-ln(1-Sinf)'" number="1" value="0.050736"/>
       <parameter include="0" name="Estar" number="2" value="0.03247"/>
@@ -63,5 +39,3 @@
       <parameter include="1" name="Ystar0" number="28" value="680.889143"/>
       <parameter include="1" name="Idete multiplier" number="29" value="2.752934"/>
       <parameter include="1" name="critical age for comorbidity" number="30" value="0.109753"/>
-    </parameters>
-  </model>

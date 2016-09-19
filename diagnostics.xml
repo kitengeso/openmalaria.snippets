@@ -37,11 +37,11 @@
     model (though the impact of using different diagnostics is generally not
     large). Specify the diagnostic under <model>:
     <clinical healthSystemMemory="28d">
-      <NeonatalMortality diagnostic="neonatal"/>
+      <NeonatalMortality diagnostic="neonatal-diagnostic"/>
     </clinical>
     (optionally with different healthSystemMemory and with NonMalariaFevers
     data), and specify the diagnostic under <diagnostics> : -->
-    <diagnostic name="neonatal" units="Other">
+    <diagnostic name="neonatal-diagnostic" units="Other">
       <!-- detection limit 40 according to non-Garki method -->
       <deterministic minDensity="40"/>
     </diagnostic>

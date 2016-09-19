@@ -1,5 +1,5 @@
-<!-- min-version:  -->
-<!-- snippet: om:nmf-incidence -->
+<!-- min-version: 26 -->
+<!-- snippet: om:model-nmf-incidence -->
 <!-- disclaimer: this may not work as intended -->
 <!-- comes under model/clinical -->
 <!-- Data copied from test scenario, source unknown -->
@@ -98,4 +98,6 @@
           <group lowerbound="89" value="0.252248436505447"/>
           <group lowerbound="90" value="0.253127874257909"/>
         </incidence>
+        <!-- Optional: data on the probability of required treatment with antibiotics, with/without a co-malaria infection. -->
+        <!-- placeholder-optional: om:model-nmf-need-treat -->
       </NonMalariaFevers>
