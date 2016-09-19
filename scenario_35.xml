@@ -17,36 +17,48 @@ all instances of the number (35), except that versions <32 are different. -->
              name="..." schemaVersion="35"
              xsi:schemaLocation="http://openmalaria.org/schema/scenario_35 scenario_35.xsd"
              xmlns:om="http://openmalaria.org/schema/scenario_35">
+  
   <!-- Required. See demography/Ifakara.xml. -->
   <!-- placeholder: om:demography -->
+  
   <!-- Required: specification of model outputs. -->
   <monitoring name="...">
     <!-- Optional: "continuous" outputs. -->
     <!-- placeholder-optional: om:mon-continuous -->
+    
     <!-- Required: outputs for surveys (not continuous). -->
     <!-- placeholder: om:mon-survey-options -->
+    
     <!-- Required: survey times and diagnostic. -->
     <!-- placeholder: om:mon-surveys -->
+    
     <!-- Required: age groups for surveys. -->
     <!-- placeholder: om:mon-age-group -->
+    
     <!-- Optional: cohorts. -->
     <!-- placeholder-optional: om:mon-cohorts -->
   </monitoring>
+  
   <!-- Required: description of all interventions. Can be empty. -->
   <interventions>
     <!-- placeholder-any: om:intervention-elt -->
     <!-- placeholder-optional: om:vectorPop -->
     <!-- placeholder-optional: om:interv-human -->
   </interventions>
+  
   <!-- Required: description of the (initial) health system. -->
   <!-- placeholder: om:healthSystem -->
+  
   <!-- Required: vector and transmission data. -->
   <!-- placeholder: entomology -->
+  
   <!-- Optional: description of parasite genetics and resistance. -->
   <!-- placeholder-optional: om:parasite-genetics -->
+  
   <!-- Optional: drug library.
   This describes how those drugs act and decay (PK and PD). -->
   <!-- placeholder-optional: om:pharmacology -->
+  
   <!-- Optional: diagnostics library -->
   <!-- placeholder-optional: om:diagnostics -->
   
@@ -59,23 +71,24 @@ all instances of the number (35), except that versions <32 are different. -->
       <!-- placeholder: om:model-param-opts -->
       <!-- placeholder-any: om:model-extra-opts -->
     </ModelOptions>
+    
     <!-- Clinical describes some health-system related parameters.
       - Health system memory is commonly set at 30 days, but can be adjusted. -->
     <clinical healthSystemMemory="30d">
-      <!-- Optional: specification of the diagnostic used to fit the neonatal mortality model. -->
-      <!-- placeholder-optional: om:model-neonatal -->
+      <!-- Optional but recommended; requires that "neonatal-diagnostic" is
+        - described in the diagnostics section: -->
+      <NeonatalMortality diagnostic="neonatal-diagnostic"/>
+      
       <!-- Non-malaria fever data may be specified here. -->
-      <!-- placeholder-optional: om:model-nmf -->
+      <!-- placeholder-optional: om:model-nmf-incidence -->
     </clinical>
+    
     <!-- human describes human-related parameters -->
-    <human>
-      <!-- Required: human vector availability data -->
-      <!-- placeholder: om:model-human-avail -->
-      <!-- Optional: human body mass (weight) data -->
-      <!-- placeholder-optional: om:model-human-weight -->
-    </human>
+    <!-- placeholder: om:model-human -->
+    
     <!-- vivax describes vivax-model parameters, if this model is used -->
     <!-- placeholder-optional: om:model-vivax -->
+    
     <!-- The parameters element describes fitting parameters. These should be
       - taken from the output of one of the fitting runs, and used with the
       - correct ModelOptions.
@@ -86,8 +99,8 @@ all instances of the number (35), except that versions <32 are different. -->
       -   "latentp" is the duration of latent period of an infection, i.e. from
       -   inoculation by mosquito to the first day the infection is patent.
       -->
-    <parameters interval="1" iseed="0" latentp="15d">
-      <!-- placeholder: om:model-parameters -->
+    <parameters interval="5" iseed="0" latentp="15d">
+      <!-- placeholder: om:model-param-parameters -->
     </parameters>
   </model>
 </om:scenario>

@@ -24,4 +24,7 @@
         <!-- repeated parameter *IS* required, otherwise interpolation will
         make parameter continually increase and the "adult age" will be wrong. -->
       </availabilityToMosquitoes>
+      
+      <!-- Optional: human body mass (weight) data -->
+      <!-- placeholder-optional: om:model-human-weight -->
     </human>

@@ -1,9 +1,0 @@
-<!-- min-version: 33 -->
-<!-- snippet: om:model-clinical -->
-    <clinical healthSystemMemory="30d">
-      <!-- Optional but recommended; requires that "neonatal-diagnostic" is
-        - described in the diagnostics section: -->
-      <NeonatalMortality diagnostic="neonatal-diagnostic"/>
-      
-      <!-- placeholder-optional: om:model-nmf-incidence -->
-    </clinical>
