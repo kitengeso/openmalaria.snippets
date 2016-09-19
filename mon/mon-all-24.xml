@@ -1,0 +1,61 @@
+<!-- min-version: 24 -->
+<!-- snippet: om:mon-survey-options -->
+<!-- disclaimer: this may not work as intended -->
+<!-- This configures which outputs you get from the main monitoring system.  -->
+<!-- This version lists all outputs numbers 0-55. You probably don't want all
+  - options in an experiment (too much data, much of which will be zeros). -->
+<!-- See here for a list of available outputs: https://github.com/SwissTPH/openmalaria/wiki/XmlMonitoring#survey-measures -->
+    <SurveyOptions>
+      <option name="nHost" value="true"/>
+      <option name="nInfect"/>
+      <option name="nExpectd"/>
+      <option name="nPatent" value="true"/>
+      <option name="sumLogPyrogenThres"/>
+      <option name="sumlogDens" value="true"/>
+      <option name="totalInfs"/>
+      <option name="nTransmit" value="true"/>
+      <option name="totalPatentInf"/>
+      <option name="sumPyrogenThresh"/>
+      <option name="nTreatments1" value="true"/>
+      <option name="nTreatments2" value="true"/>
+      <option name="nTreatments3" value="true"/>
+      <option name="nUncomp" value="true"/>
+      <option name="nSevere" value="true"/>
+      <option name="nSeq"/>
+      <option name="nHospitalDeaths"/>
+      <option name="nIndDeaths"/>
+      <option name="nDirDeaths" value="true"/>
+      <option name="nEPIVaccinations" value="true"/>
+      <option name="allCauseIMR"/>
+      <option name="nMassVaccinations" value="true"/>
+      <option name="nHospitalRecovs"/>
+      <option name="nHospitalSeqs"/>
+      <option name="nIPTDoses"/>
+      <option name="annAvgK" value="true"/>
+      <option name="nNMFever"/>
+      
+      <option name="innoculationsPerAgeGroup"/>
+      <option name="Vector_Nv0" value="true"/>
+      <option name="Vector_Nv" value="true"/>
+      <option name="Vector_Ov" value="true"/>
+      <option name="Vector_Sv" value="true"/>
+      <option name="inputEIR" value="true"/>
+      <option name="simulatedEIR" value="true"/>
+      <option name="Clinical_RDTs"/>
+      <option name="Clinical_DrugUsage"/>
+      <option name="Clinical_FirstDayDeaths"/>
+      <option name="Clinical_HospitalFirstDayDeaths"/>
+      <option name="nNewInfections"/>
+      <option name="nMassITNs"/>
+      <option name="nEPI_ITNs"/>
+      <option name="nMassIRS"/>
+      <option name="nMassVA"/>
+      <option name="Clinical_Microscopy"/>
+      <option name="Clinical_DrugUsageIV"/>
+      <option name="nAddedToCohort"/>
+      <option name="nRemovedFromCohort"/>
+      <option name="nMDAs"/>
+      <option name="nNmfDeaths"/>
+      <option name="nAntibioticTreatments"/>
+      <option name="nMassScreenings"/>
+    </SurveyOptions>
