@@ -27,7 +27,9 @@
         <treatSimple durationLiver="0t" durationBlood="1t"/>
       </treeUCSelfTreat>
       <cureRateSevere value="0.5"/>
-      <treatmentSevere/>
+      <treatmentSevere>
+        <clearInfections stage="blood" timesteps="1"/>
+      </treatmentSevere>
     </DecisionTree5Day>
     <CFR>
       <group lowerbound="0.00" value="0.0918900"/>
