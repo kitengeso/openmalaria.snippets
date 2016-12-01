@@ -1,20 +1,16 @@
 This is the OpenMalaria snippet library.
 ========================================
 
-## Organisation
+## Organisation and Format
 
-Snippets appear as XML (text) files, sometimes with a version number in the file name.
-This version number is the OpenMalaria schema version that the snippet was
-written for or checked against, however most snippets will be
-forward-compatible.
+Snippets appear as XML (text) files, sometimes with a version number in the file name. This version number is the OpenMalaria schema version
+that the snippet was written for or checked against, however most snippets will be forward-compatible.   The XML snippets are stored in
+separate folders corresponding to the main XML elements that make up a valid scenario file.
 
-There are no requirements about the directory structure or where files are in
-the library.
+In addition to the XML snippets, there are also XML templates corresponding to each OpenMalaria schema version e.g.
+'scenario_33.xml'.  A fully functional scenario file is constructed by pasting a complete set of snippets into one of the templates........
 
-## Format ##
-
-Each file contains some comments and a chunk of XML code which can be pasted
-into a larger OpenMalaria scenario XML.
+Each file contains some comments and a chunk of XML code which can be pasted into a larger OpenMalaria scenario XML.
 
 Some special comments may appear at the beginning of the file:
 
@@ -22,27 +18,21 @@ Some special comments may appear at the beginning of the file:
     <!-- max-version: 36 -->
     <!-- snippet: om:demography -->
 
-The min- and max-version tags specify limits to the range of compatible
-OpenMalaria versions. They do not need to appear; e.g. if the snippet is
-compatible with the latest version it doesn't make sense to specify the
-max-version (unless it is expected that the next version will be incompatible).
+The min- and max-version tags specify limits to the range of compatible OpenMalaria versions. They do not need to appear; e.g. if the snippet is
+compatible with the latest version it doesn't make sense to specify the max-version (unless it is expected that the next version will be incompatible).
 
-The `snippet:` tag is used to specify where the snippet may appear; e.g. there
-should be a comment like the following somewhere in another snippet (a
+The `snippet:` tag is used to specify where the snippet may appear; e.g. there should be a comment like the following somewhere in another snippet (a
 *template*):
 
     <!-- placeholder: om:demography -->
 
-Variations on this hint at how many items can be inserted here (optional: zero
-or one, any: zero or more, multiple: one or more):
+Variations on this hint at how many items can be inserted here (optional: zero or one, any: zero or more, multiple: one or more):
 
     <!-- placeholder-optional: om:pharmacology -->
     <!-- placeholder-any: om:intervention-elt -->
     <!-- placeholder-multiple: om:vector-pop-intervention -->
 
-In addition, each file should contain some commentry of its source, its
-purpose and how its parameters were obtained.
-
+In addition, each file should contain some commentry of its source, its purpose and how its parameters were obtained.
 
 ## Contributions ##
 
